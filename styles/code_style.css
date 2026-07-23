@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url(../fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf);
+}
+
+.code_block {
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+    outline-style: groove;
+    outline-color: black;
+    background-color: #eeeeee;
+    margin: 10px;
+    padding: 5px;
+}
