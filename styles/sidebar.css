@@ -2,9 +2,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #A68357;
-    margin-left: 216px; 
 }
 
+.content {
+    margin-left: 216px; 
+}
 .sidebar {
     position: fixed;
     width: 200px;
