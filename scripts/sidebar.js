@@ -1,7 +1,7 @@
 async function load_sidebar()
 {
     const file = await fetch("pages/sidebar.html");
-    const html = file.text();
+    const html = await file.text();
 
     //There should be only one body element
     document.body.insertAdjacentHTML("afterbegin", html);
