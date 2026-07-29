@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #A68357;
+}
+
+.sidebar {
+    position: fixed;
+    width: 200px;
+    height:100%;
+    background-color: #002f00;
+    padding: 16px;
+    border-right: 5px solid #001400;
+    color: white;
+    display: flex;
+    justify-content: center; 
+}
+.title-block {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 64px;
+}
