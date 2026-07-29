@@ -1,0 +1,4 @@
+# LibreOffice nd .odt files
+.*.~lock.*#
+.~lock.*#
+*.odt#
