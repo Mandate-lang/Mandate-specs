@@ -12,6 +12,10 @@ function get_page()
 {
   const path = window.location.pathname;
   const page_name = path.split("/").pop();
+  if (page_name === undefined)
+  {
+    return "index.html";
+  }
   return page_name;
 }
 
