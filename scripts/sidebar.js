@@ -13,22 +13,7 @@ function set_caps(name)
 // Functions for adding sidebar
 async function load_sidebar()
 {
-  let file = null
-
-  //handle index.html being at top of directory
-  try
-  {
-    file = await fetch("../pages/sidebar.html");
-
-    if (!file.ok)
-    {
-      throw new Error("sidebar laoding failed with error code " + file.status);
-    }
-  }
-  catch(error)
-  {
-    file = await fetch("pages/sidebar.html");
-  }
+  const file = await fetch("/pages/sidebar.html");
   const html = await file.text();
 
   //There should be only one body element
@@ -40,7 +25,7 @@ async function setup_table_of_contents()
   for (const page of pages)
   {
     const link = "<li>\n" +
-                 "  <a href=\"pages\\" + page + ".html\">" + set_caps(page) +"</a>\n" +
+                 "  <a href=\"/pages/" + page + ".html\">" + set_caps(page) +"</a>\n" +
                  "</li>"
     
     table_of_contents.insertAdjacentHTML("beforeend", link);
