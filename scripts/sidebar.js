@@ -52,9 +52,19 @@ async function setup_table_of_contents()
   const table_of_contents = await document.getElementById("table-of-contents");
   for (const page of pages)
   {
-    const link = "<li>\n" +
-                 "  <a href=\"" + path_level + "pages/" + page + ".html\">" + set_caps(page) +"</a>\n" +
-                 "</li>"
+    let link = "";
+    if (page + ".html" == current_page)
+    {
+      link = "<li>\n" +
+             set_caps(page)
+             "</li>"
+    }
+    else
+    {
+      link = "<li>\n" +
+             "  <a href=\"" + path_level + "pages/" + page + ".html\">" + set_caps(page) +"</a>\n" +
+             "</li>"
+    }
     
     table_of_contents.insertAdjacentHTML("beforeend", link);
   }
