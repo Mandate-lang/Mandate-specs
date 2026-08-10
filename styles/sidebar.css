@@ -17,6 +17,12 @@ body {
     color: white;
     display: flex;
     justify-content: center; 
+    
+}
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .title-block {
     display: flex;
